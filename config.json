@@ -1,0 +1,26 @@
+{
+    "services": {
+        "proxy": {
+            "port": 10000
+        },
+        "auth": {
+            "port": 10001
+        },
+        "storage": {
+            "port": 10002
+        },
+        "users": {
+            "port": 10003
+        }
+    },
+    "db": {
+        "username": "dev",
+        "password": "dev123!",
+        "host": "cluster0.c3iyx.mongodb.net",
+        "dbname": "jsa08_project"
+    },
+    "mailer": {
+        "key": "",
+        "domain": ""
+    }
+}

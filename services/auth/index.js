@@ -34,9 +34,9 @@ api.post('/api/v1/auth/forgot-password', auth.forgotPassword);
 api.post('/api/v1/auth/reset-password', auth.resetPassword);
 api.post('/api/v1/auth/change-password', auth.changePassword);
 
-api.listen(cfg.get('server').port, err => {
+api.listen(cfg.get('services').auth.port, err => {
     if (err) {
         return console.error('Could not start server:', err);
     }
-    console.log('Server successfully started on port', cfg.get('server').port);
+    console.log('Server successfully started on port', cfg.get('services').auth.port);
 });

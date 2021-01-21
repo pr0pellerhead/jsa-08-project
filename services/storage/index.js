@@ -11,7 +11,7 @@ const api = express();
 
 api.use(bodyParser.json());
 api.use(jwt({
-    secret: cfg.get('server').jwt_key,
+    secret: cfg.get('security').jwt_key,
     algorithms: ['HS256']
 }).unless({
     path: [

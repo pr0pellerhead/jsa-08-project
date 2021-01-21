@@ -9,9 +9,15 @@ const auth = require('./handlers/auth');
 
 const api = express();
 
+// api.use((req, res, next) => {
+//     console.log(req.url);
+//     console.log(req.path);
+//     next();
+// });
+
 api.use(bodyParser.json());
 api.use(jwt({
-    secret: cfg.get('server').jwt_key,
+    secret: cfg.get('security').jwt_key,
     algorithms: ['HS256']
 }).unless({
     path: [
